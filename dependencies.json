@@ -1,0 +1,103 @@
+{
+  "external_import_names": [
+    "Agent",
+    "Env",
+    "Mask",
+    "matplotlib",
+    "numpy",
+    "ortools",
+    "psutil",
+    "pytest",
+    "scipy",
+    "torch"
+  ],
+  "dynamic_calls": [
+    {
+      "file": "Agent/Run/publication_late_dynamic.py",
+      "line": 64,
+      "call": "importlib.import_module(module)"
+    },
+    {
+      "file": "Agent/Run/evaluate_publication_rolling_roads.py",
+      "line": 43,
+      "call": "importlib.import_module(module)"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 185,
+      "call": "subprocess.run(command, input=buffer.getvalue(), capture_output=True, timeout=30)"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 209,
+      "call": "subprocess.Popen(ssh_command(transport, bootstrap('Agent.Run.m2m_gpu_dispatch', ['send_models', '--output', transport['remote_root']])), stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 94,
+      "call": "subprocess.Popen(bootstrap('Agent.Run.m2m_gpu_dispatch', ['gpu_observe', '--output', output]), cwd=ROOT)"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 191,
+      "call": "subprocess.Popen(ssh_command(transport, bootstrap('Agent.Run.m2m_gpu_dispatch', ['gpu_group', '--output', transport['remote_root']])), stdin=subprocess.PIPE, stdout=stream, stderr=subprocess.STDOUT)"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 112,
+      "call": "subprocess.Popen(bootstrap('Agent.Run.m2m_reference_development_gpu', ['train', '--output', output / 'development', '--admission', output / 'admission', '--method', method]), cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, env=dict(os.environ, OMP"
+    },
+    {
+      "file": "Agent/Run/m2m_gpu_dispatch.py",
+      "line": 263,
+      "call": "subprocess.Popen([sys.executable, '-B', '-m', 'Agent.Run.m2m_reference_development_gpu', 'evaluate', '--output', str(output / 'development'), '--admission', admission, '--method', task['model']['method'], '--task-id', task['id']], cwd=ROOT, stdout=st"
+    },
+    {
+      "file": "Agent/Run/m2m_hg_reference_formal.py",
+      "line": 362,
+      "call": "subprocess.Popen([sys.executable, '-B', '-m', __name__ if __name__ != '__main__' else 'Agent.Run.m2m_hg_reference_formal', 'observe', '--output', str(out)], cwd=ROOT, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    },
+    {
+      "file": "Agent/Run/m2m_hg_reference_formal.py",
+      "line": 387,
+      "call": "subprocess.Popen([sys.executable, '-B', '-m', 'Agent.Run.m2m_hg_reference_formal', 'worker', '--output', str(out), '--task', key], cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, env=env, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    },
+    {
+      "file": "Agent/Publication/zhou2023_learning.py",
+      "line": 31,
+      "call": "importlib.util.spec_from_file_location('paper11_pinned_zhou_gcn', MODEL_SOURCE)"
+    },
+    {
+      "file": "Agent/Run/foundation_campaign.py",
+      "line": 252,
+      "call": "subprocess.Popen([sys.executable, '-m', 'Agent.Run.foundation_campaign', 'observe', '--output', str(out)], cwd=archive, stdout=stream, stderr=subprocess.STDOUT, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    },
+    {
+      "file": "Agent/Run/foundation_campaign.py",
+      "line": 270,
+      "call": "subprocess.Popen([sys.executable, '-m', 'Agent.Run.foundation_campaign', 'worker', '--output', str(out), '--task', task['id']], cwd=archive, stdout=stream, stderr=subprocess.STDOUT, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    },
+    {
+      "file": "Agent/Run/m2m_own_pipeline.py",
+      "line": 602,
+      "call": "subprocess.Popen(cmd, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, env=dict(os.environ, OMP_NUM_THREADS='1', MKL_NUM_THREADS='1', OPENBLAS_NUM_THREADS='1', PYTHONHASHSEED=str(task.get('seed', 1701))))"
+    },
+    {
+      "file": "Agent/Run/m2m_own_pipeline.py",
+      "line": 609,
+      "call": "subprocess.Popen([sys.executable, '-m', 'Agent.Run.m2m_own_pipeline', 'observe', '--output', str(output)], cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)"
+    },
+    {
+      "file": "Agent/Run/m2m_formal_campaign.py",
+      "line": 338,
+      "call": "subprocess.Popen([sys.executable, '-B', '-m', __name__ if __name__ != '__main__' else 'Agent.Run.m2m_formal_campaign', 'observe', '--output', str(out)], cwd=ROOT, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    },
+    {
+      "file": "Agent/Run/m2m_formal_campaign.py",
+      "line": 363,
+      "call": "subprocess.Popen([sys.executable, '-B', '-m', 'Agent.Run.m2m_formal_campaign', 'worker', '--output', str(out), '--task', key], cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, env=env, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+    }
+  ],
+  "dependency_type": "static import closure plus known original search roots; runtime assets remain external",
+  "training_evaluation_configs": "Required campaign manifests and CLI arguments are enforced in the included entrypoints; private production records not distributed."
+}

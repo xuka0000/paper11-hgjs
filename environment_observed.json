@@ -1,0 +1,15 @@
+{
+  "python": "3.11.5",
+  "platform": "win32",
+  "packages": {
+    "torch": "2.2.1+cpu",
+    "numpy": "1.26.4",
+    "scipy": "1.11.1",
+    "pandas": "2.3.3",
+    "pytest": "7.4.0",
+    "transformers": "4.32.1",
+    "Pillow": "9.4.0",
+    "psutil": "5.9.0"
+  },
+  "kind": "observed local mechanism-test host, not a full training environment lock"
+}
